@@ -1,6 +1,6 @@
 # React Native Horizontal List Component
 
-> This is an assesssment excerise please don't use it as a react-native library, this code not production ready.
+> This is an assesssment exercise please don't use it as a react-native library, this code not production ready.
 
 ## Table of Contents
 
