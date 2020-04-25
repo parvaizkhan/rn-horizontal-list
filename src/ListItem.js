@@ -2,7 +2,7 @@ import React, { memo, useCallback } from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
 import propTypes from 'prop-types';
 
-import Rating from './Rating';
+import { Rating } from './Rating';
 
 export const ListItem = memo(props => {
   const { size, onPress } = props;

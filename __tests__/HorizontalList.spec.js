@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import HorizontalList from '../src/HorizontalList';
+import { HorizontalList } from '../src/HorizontalList';
 
 const mockProps = {
     title: 'a',

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import HorzontalList from './src/HorizontalList';
+import { HorizontalList } from './src/HorizontalList';
 
 import data from './arrivals.json';
 
@@ -10,10 +10,12 @@ export default () => {
     }, [])
 
     return (
-        <HorzontalList
+        <HorizontalList
             title={'New Arrivals'}
             {...{ data, onPress }}
         />
     );
 
 }
+
+export * from './src';

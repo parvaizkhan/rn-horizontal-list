@@ -1,7 +1,7 @@
 {
   "name": "rn-horizontal-list",
-  "version": "1.0.1",
-  "description": "A wrapper written around react native's FlatList component",
+  "version": "1.0.2",
+  "description": "An assessment excercise for React Native",
   "main": "index.js",
   "keywords": [
     "react",
@@ -18,6 +18,11 @@
     "lint": "eslint *.js",
     "format": "prettier --write src/*.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parvaizkhan/rn-horizontal-list.git"
+  },
+  "homepage": "https://github.com/parvaizkhan/rn-horizontal-list.git",
   "dependencies": {
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",

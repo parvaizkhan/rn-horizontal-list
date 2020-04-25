@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Rating from '../src/Rating';
+import { Rating } from '../src/Rating';
 
 const mockProps = {
     containerStyle: {},
