@@ -1,30 +1,30 @@
-import React, { memo, useCallback } from 'react';
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 import propTypes from 'prop-types';
 
-import { Rating } from './Rating';
+import {Rating} from './Rating';
 
 export const ListItem = memo(props => {
-  const { size, onPress } = props;
-  const { title, image, category, rating } = props.item;
+  const {size, onPress} = props;
+  const {title, image, category, rating} = props.item;
 
   const onPressItem = useCallback(() => {
     onPress('https://www.imdb.com/title/tt0468569/');
   }, [props.item]);
 
   return (
-    <View style={[styles.container, { width: size }]}>
+    <View style={[styles.container, {width: size}]}>
       <TouchableOpacity activeOpacity={0.9} onPress={onPressItem}>
         <Image
           source={image}
-          style={[styles.image, { width: size, height: size }]}
+          style={[styles.image, {width: size, height: size}]}
         />
       </TouchableOpacity>
       <View>
         <Text style={styles.category} numberOfLines={1} ellipsizeMode={'tail'}>
           {category}
         </Text>
-        <Rating starSize={18} rating={rating} containerStyle={{ width: '70%' }} />
+        <Rating starSize={18} rating={rating} containerStyle={{width: '70%'}} />
         <Text
           onPress={onPressItem}
           style={styles.description}
@@ -38,7 +38,7 @@ export const ListItem = memo(props => {
 });
 
 ListItem.defaultProps = {
-  item: { rating: 0 },
+  item: {rating: 0},
   size: 150,
   onPress: () => null,
 };

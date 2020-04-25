@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, ViewPropTypes, StyleSheet } from 'react-native';
+import React, {Component} from 'react';
+import {View, ViewPropTypes, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 
 import EntypoIcons from 'react-native-vector-icons/Entypo';
@@ -81,7 +81,7 @@ export class Rating extends Component {
 
     let roundedRating = Math.round(rating * 2) / 2;
 
-    const starButtons = Array.from({ length: maxStars }, (_, i) => {
+    const starButtons = Array.from({length: maxStars}, (_, i) => {
       let iconName = emptyStar;
       let lastStarColor = emptyStarColor;
 

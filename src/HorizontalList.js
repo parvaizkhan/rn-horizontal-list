@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, FlatList, Text } from 'react-native';
+import {View, StyleSheet, FlatList, Text} from 'react-native';
 import propTypes from 'prop-types';
 
-import { ListItem } from './ListItem';
+import {ListItem} from './ListItem';
 
 export class HorizontalList extends React.Component {
   constructor(props) {
@@ -11,9 +11,9 @@ export class HorizontalList extends React.Component {
     this.renderItem = this.renderItem.bind(this);
   }
 
-  renderItem({ item }) {
-    const { onPress } = this.props;
-    return <ListItem {...{ item, onPress }} />;
+  renderItem({item}) {
+    const {onPress} = this.props;
+    return <ListItem {...{item, onPress}} />;
   }
 
   keyExtractor(item) {
@@ -21,11 +21,11 @@ export class HorizontalList extends React.Component {
   }
 
   renderSeparator() {
-    return <View style={{ width: 10 }} />;
+    return <View style={{width: 10}} />;
   }
 
   render() {
-    const { title, textStyle, onPress, ...props } = this.props;
+    const {title, textStyle, onPress, ...props} = this.props;
 
     return (
       <View>
