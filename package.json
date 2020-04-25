@@ -1,5 +1,5 @@
 {
-  "name": "react-native-horizontal-list",
+  "name": "rn-horizontal-list",
   "version": "1.0.0",
   "description": "A wrapper written around react native's FlatList component",
   "main": "index.js",
