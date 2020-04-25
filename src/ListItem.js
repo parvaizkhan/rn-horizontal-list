@@ -1,27 +1,25 @@
-import React, { memo, useCallback } from 'react';
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 import Rating from 'react-native-star-rating';
-import { startCase } from 'lodash';
+import {startCase} from 'lodash';
 import propTypes from 'prop-types';
 
 export const ListItem = memo(props => {
-
-  const { size, onPress } = props;
-  const { title, image, category, rating } = props.item;
+  const {size, onPress} = props;
+  const {title, image, category, rating} = props.item;
 
   const onPressItem = useCallback(() => {
-    onPress(props.item)
-  }, [props.item])
+    onPress(props.item);
+  }, [props.item]);
 
   return (
     <TouchableOpacity
       activeOpacity={0.9}
       onPress={onPressItem}
-      style={[styles.container, { width: size }]}
-    >
+      style={[styles.container, {width: size}]}>
       <Image
         source={image}
-        style={[styles.image, { width: size, height: size }]}
+        style={[styles.image, {width: size, height: size}]}
       />
       <View>
         <Text style={styles.category} numberOfLines={1} ellipsizeMode={'tail'}>
@@ -32,7 +30,7 @@ export const ListItem = memo(props => {
           maxStars={5}
           rating={rating}
           fullStar={'ios-star'}
-          containerStyle={{ width: '70%' }}
+          containerStyle={{width: '70%'}}
           emptyStar={'ios-star-outline'}
           halfStar={'ios-star-half'}
           iconSet={'Ionicons'}
@@ -52,8 +50,9 @@ export const ListItem = memo(props => {
 });
 
 ListItem.defaultProps = {
-  item: { rating: 0 },
+  item: {rating: 0},
   size: 150,
+  onPress: () => null,
 };
 
 ListItem.propTypes = {
