@@ -18,6 +18,8 @@ or
 ```sh
 yarn add rn-horizontal-list
 ```
+2. link `react-native-vector-icons`   
+please refer to [react-native-vector-icons installation guide](https://github.com/oblador/react-native-vector-icons#installation)
 
 ### Horizontal List Example
 
