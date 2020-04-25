@@ -1,51 +1,39 @@
 import React, {memo, useCallback} from 'react';
 import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
-import Rating from 'react-native-star-rating';
-import {startCase} from 'lodash';
 import propTypes from 'prop-types';
+
+import Rating from './Rating';
 
 export const ListItem = memo(props => {
   const {size, onPress} = props;
   const {title, image, category, rating} = props.item;
 
   const onPressItem = useCallback(() => {
-    onPress(props.item);
+    onPress('https://www.imdb.com/title/tt0468569/');
   }, [props.item]);
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.9}
-      onPress={onPressItem}
-      style={[styles.container, {width: size}]}>
-      <Image
-        source={image}
-        style={[styles.image, {width: size, height: size}]}
-      />
+    <View style={[styles.container, {width: size}]}>
+      <TouchableOpacity activeOpacity={0.9} onPress={onPressItem}>
+        <Image
+          source={image}
+          style={[styles.image, {width: size, height: size}]}
+        />
+      </TouchableOpacity>
       <View>
         <Text style={styles.category} numberOfLines={1} ellipsizeMode={'tail'}>
-          {startCase(category.toLowerCase())}
+          {category}
         </Text>
-        <Rating
-          disabled={true}
-          maxStars={5}
-          rating={rating}
-          fullStar={'ios-star'}
-          containerStyle={{width: '70%'}}
-          emptyStar={'ios-star-outline'}
-          halfStar={'ios-star-half'}
-          iconSet={'Ionicons'}
-          fullStarColor={'#ffd700'}
-          emptyStarColor={'#ffd700'}
-          starSize={18}
-        />
+        <Rating starSize={18} rating={rating} containerStyle={{width: '70%'}} />
         <Text
+          onPress={onPressItem}
           style={styles.description}
           numberOfLines={2}
           ellipsizeMode={'tail'}>
           {title}
         </Text>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 });
 
