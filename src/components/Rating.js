@@ -2,31 +2,7 @@ import React, {Component} from 'react';
 import {View, ViewPropTypes, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 
-import EntypoIcons from 'react-native-vector-icons/Entypo';
-import ZocialIcons from 'react-native-vector-icons/Zocial';
-import FeatherIcons from 'react-native-vector-icons/Feather';
-import IoniconsIcons from 'react-native-vector-icons/Ionicons';
-import OcticonsIcons from 'react-native-vector-icons/Octicons';
-import EvilIconsIcons from 'react-native-vector-icons/EvilIcons';
-import FoundationIcons from 'react-native-vector-icons/Foundation';
-import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
-import MaterialIconsIcons from 'react-native-vector-icons/MaterialIcons';
-import SimpleLineIconsIcons from 'react-native-vector-icons/SimpleLineIcons';
-import MaterialCommunityIconsIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-const iconTypes = {
-  Entypo: EntypoIcons,
-  EvilIcons: EvilIconsIcons,
-  Feather: FeatherIcons,
-  FontAwesome: FontAwesomeIcons,
-  Foundation: FoundationIcons,
-  Ionicons: IoniconsIcons,
-  MaterialIcons: MaterialIconsIcons,
-  MaterialCommunityIcons: MaterialCommunityIconsIcons,
-  Octicons: OcticonsIcons,
-  Zocial: ZocialIcons,
-  SimpleLineIcons: SimpleLineIconsIcons,
-};
+import Icon from './Icon';
 
 const propTypes = {
   containerStyle: ViewPropTypes.style,
@@ -95,12 +71,10 @@ export class Rating extends Component {
 
       roundedRating--;
 
-      const Icon = iconTypes[iconType];
-
       return (
         <Icon
-          rating={i + 1}
           name={iconName}
+          type={iconType}
           size={starSize}
           key={`star-${i}`}
           style={starStyle}

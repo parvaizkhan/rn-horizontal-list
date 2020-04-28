@@ -4,12 +4,12 @@ import propTypes from 'prop-types';
 
 import {Rating} from './Rating';
 
-export const ListItem = memo(props => {
+export const MediaCard = memo(props => {
   const {size, onPress} = props;
   const {title, image, category, rating} = props.item;
 
   const onPressItem = useCallback(() => {
-    onPress('https://www.imdb.com/title/tt0468569/');
+    onPress(props.item);
   }, [props.item]);
 
   return (
@@ -37,13 +37,13 @@ export const ListItem = memo(props => {
   );
 });
 
-ListItem.defaultProps = {
+MediaCard.defaultProps = {
   item: {rating: 0},
   size: 150,
   onPress: () => null,
 };
 
-ListItem.propTypes = {
+MediaCard.propTypes = {
   onPress: propTypes.func,
   size: propTypes.number,
   item: propTypes.shape({

@@ -1,21 +1,5 @@
-import React, { useCallback } from 'react';
-import { HorizontalList } from './src/HorizontalList';
+import App from './src/App';
 
-import data from './arrivals.json';
+export default App;
 
-export default () => {
-
-    const onPress = useCallback((url) => {
-        alert(url);
-    }, [])
-
-    return (
-        <HorizontalList
-            title={'New Arrivals'}
-            {...{ data, onPress }}
-        />
-    );
-
-}
-
-export * from './src';
+export * from './src/components';
