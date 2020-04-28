@@ -20,16 +20,19 @@ yarn add rn-horizontal-list
 2. link `react-native-vector-icons`   
 please refer to [react-native-vector-icons installation guide](https://github.com/oblador/react-native-vector-icons#installation)
 
-### Horizontal List Example
+3. link `react-native-linear-gradient`   
+please refer to [react-native-linear-gradient installation guide](https://github.com/react-native-community/react-native-linear-gradient#using-yarn)
+
+### Assessment App Example
 
 ```js
-import HorizontalList from 'rn-horizontal-list';
+import Screen from 'rn-horizontal-list';
 
 class App extends Component {
 
   render() {
     return (
-        <HorizontalList />
+        <Screen />
     );
   }
 }
