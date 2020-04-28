@@ -64,6 +64,13 @@ const styles = StyleSheet.create({
     height: 35,
     borderRadius: 35 / 2,
     overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 1.0,
     elevation: 1,
   },
   avatar: {
