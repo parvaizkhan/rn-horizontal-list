@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import {ListItem} from '../src/ListItem';
+import {MediaCard} from '../src/components/MediaCard';
 
 const mockProps = {
   item: {rating: 0, id: '1', title: 'a', category: 'b', image: {uri: 'c'}},
@@ -10,10 +10,10 @@ const mockProps = {
 };
 
 const getMock = (props = {}) => {
-  return <ListItem {...props} />;
+  return <MediaCard {...props} />;
 };
 
-describe('ListItem', () => {
+describe('MediaCard', () => {
   it('renders without crashing', () => {
     const rendered = renderer.create(getMock(mockProps)).toJSON();
 
