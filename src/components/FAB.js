@@ -1,5 +1,5 @@
 import React, {memo} from 'react';
-import {StyleSheet, TouchableOpacity, ViewPropTypes} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import propTypes from 'prop-types';
 
 import Icon from './Icon';
@@ -32,10 +32,10 @@ FAB.propTypes = {
 
 const styles = StyleSheet.create({
   button: {
-    width: 75,
-    height: 75,
+    width: 70,
+    height: 70,
     position: 'absolute',
-    borderRadius: 75 / 2,
+    borderRadius: 35,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#ffbd00',
@@ -48,10 +48,10 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 6,
     alignSelf: 'center',
-    bottom: 22,
+    bottom: 20,
   },
   icon: {
-    fontSize: 32,
+    fontSize: 30,
     color: '#fff',
   },
 });

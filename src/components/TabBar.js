@@ -52,7 +52,10 @@ export const TabBar = props => {
       <FAB onPress={onAction} />
       <View style={styles.container}>
         <View style={styles.right}>{leftTabs.map(renderTabs)}</View>
-        <View style={styles.placeholder} />
+        <View style={styles.fabPlaceholder}>
+          <View style={styles.circle} />
+          <View style={styles.circleMask} />
+        </View>
         <View style={styles.left}>{rightTabs.map(renderTabs)}</View>
       </View>
     </>
@@ -83,22 +86,38 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
     flexDirection: 'row',
-    overflow: 'hidden',
-    padding: 5,
   },
   right: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'flex-end',
+    padding: 5,
   },
   left: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'flex-end',
+    padding: 5,
   },
-  placeholder: {
-    flex: 0.5,
+  fabPlaceholder: {
+    width: 80,
+  },
+  circle: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: '#f9f9f9',
+    borderWidth: 1,
+    borderColor: '#dedede',
+    position: 'absolute',
+    top: -40,
+    zIndex: 2,
+  },
+  circleMask: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#f9f9f9',
+    zIndex: 2,
   },
 });
